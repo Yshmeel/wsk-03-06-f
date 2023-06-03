@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="./css/style.css" rel="stylesheet" />
+
+    <title>Frontend</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="game">
+            <!-- Welcome screen. Contains start game button -->
+            <div class="game__screen welcome-message active">
+                <div class="welcome-message__block">
+                    <div class="welcome-message__title">
+                        <h1>Guatemala Memory Game</h1>
+                    </div>
+    
+                    <div class="menu welcome-message__menu">
+                        <div class="menu__button btn start-game-button">
+                            <span>Start Game</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overlay screen of record submittion. Shows modal and form to submit record -->
+            <div class="game__screen overlay-screen record-form">
+                <div class="record-form__title">
+                    <h1>Game over</h1>
+                    <span>Your result is <span class="record-rounds"></span> rounds.</span>
+                </div>
+                <div class="record-form__description">
+                    Now you can register your result in stats to compete with other people!</br>
+                    Or you can cancel registration and try again to get better result
+                </div>
+                <div class="record-form__content">
+                    <div class="record-form__content--field">
+                        <label>Your name</label>
+                        <input type="text" id="record-name" />
+                    </div>
+
+                    <div class="menu record__menu">
+                        <div class="menu__button btn submit-record">
+                            <span>Save record</span>
+                            <div class="wave-hover"></div>
+                        </div>
+
+                        <div class="menu__button btn btn-gray">
+                            <span>Main menu</span>
+                            <div class="wave-hover"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="game__screen game-area">
+                <div class="game-area__stats">
+                    <div class="game-area__stats--left"></div>
+                    <div class="game-area__stats--right">
+                        <div class="btn btn-stats restart-button">
+                            <span>Restart</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-area__cards"></div>
+            </div>
+        </div>
+
+        <!-- Being shown after submitting a new record -->
+        <div class="stats">
+            <div class="stats__source">
+                <div class="stats__header">
+                    Stats
+                </div>
+                <div class="stats__items"></div>
+                <div class="stats__footer">
+                    <div class="menu stats__menu">
+                        <div class="menu__button btn start-game-button">
+                            <span>Play a game</span>
+                            <div class="wave-hover"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
